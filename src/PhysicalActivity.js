@@ -39,7 +39,7 @@ class PhysicalActivity {
   }
 
   daysStepGoalReached() {
-    let information = info.activityData.filter(el => el.numSteps > this.user.dailyStepGoal)
+    let information = this.info.activityData.filter(el => el.numSteps > this.user.dailyStepGoal)
     let dates = information.map(el => el.date);
     return `These are the dates you reached your step goal: ${dates}`
   }
@@ -47,6 +47,30 @@ class PhysicalActivity {
   climbingRecord() {
     let information = this.info.activityData.map(el => el.flightsOfStairs)
     return Math.max(...information)
+  }
+
+  weeklySteps(date) {
+    let reversed = this.info.activityData.map(el => el).reverse()
+    let dataByDay = reversed.filter(el => el.date === date)[0];
+    let index = reversed.indexOf(dataByDay)
+    let data = reversed.slice(index, index + 7).map(el => el.numSteps);
+    return data;
+  }
+  
+  weeklyStairs(date) {
+    let reversed = this.info.activityData.map(el => el).reverse()
+    let dataByDay = reversed.filter(el => el.date === date)[0];
+    let index = reversed.indexOf(dataByDay)
+    let data = reversed.slice(index, index + 7).map(el => el.flightsOfStairs);
+    return data;
+  }
+  
+  weeklyMinutes(date) {
+    let reversed = this.info.activityData.map(el => el).reverse()
+    let dataByDay = reversed.filter(el => el.date === date)[0];
+    let index = reversed.indexOf(dataByDay)
+    let data = reversed.slice(index, index + 7).map(el => el.minutesActive);
+    return data;
   }
 }
 
