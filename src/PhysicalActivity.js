@@ -19,14 +19,14 @@ class PhysicalActivity {
     let activity = this.info.activityData
     let workArray = activity.map(el => el.date)
     let index = workArray.indexOf(day)
-    let data = activity.slice(index-6, index+1).map(el => el.minutesActive)
-    let avg = data.reduce((acc,curr) => acc+curr)/data.length
+    let data = activity.slice(index - 6, index + 1).map(el => el.minutesActive)
+    let avg = data.reduce((acc, curr) => acc + curr) / data.length
     return avg.toFixed(2)
   }
 
   stepGoalReached(day) {
     let steps = this.info.activityData.filter(el => el.date === day)[0].numSteps;
-    if(steps < this.user.dailyStepGoal){
+    if (steps < this.user.dailyStepGoal) {
       return `You did not reach you step goal.`
     } else {
       return `You reached your step goal!`
