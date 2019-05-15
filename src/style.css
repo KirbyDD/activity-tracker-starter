@@ -25,11 +25,14 @@ section {
   display: grid;
   grid-gap: 1%;
   width: 100%;
-  height: 250px;
   margin: 10px auto;
 }
 
-#sleep,
+#sleep {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
 #hydration,
 #user-data {
   grid-template-columns: 1fr 1fr;
@@ -54,8 +57,9 @@ h1 {
 }
 
 article {
-  background-color: white;
+  background-color: rgb(247, 247, 247);
   border: 2px rgb(94, 95, 102) solid;
+  border-radius: 5px;
   width: 100%;
   overflow: scroll;
   padding: 15px;
@@ -77,6 +81,7 @@ table {
   line-height: 2em;
 }
 
+#sleep-hours-card,
 #sleep-quality-card,
 .hydration-card {
   text-align: center
