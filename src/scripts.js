@@ -72,7 +72,14 @@ const todaysActivity = (user) => {
   $('#todays-steps').append(` ${activity.stepsByDay(moment().format('DD/MM/YYYY'))}`)
   $('#mins-active').append(` ${activity.activeMins(moment().format('DD/MM/YYYY'))}`)
   $('#miles-walked').append(` ${activity.milesWalked(moment().format('DD/MM/YYYY'))}`)
+  weeklyActivity(activity)
 }
 
+const weeklyActivity = (activity) => {
+  let weeklyData = activity.weeklyInfo(moment().format('DD/MM/YYYY')).map(el => {
+    return `<tr><td>${el.date}</td><td>${el.flightsOfStairs}</td><td>${el.numSteps}</td><td>${el.minutesActive}</td></tr>`
+  })
+  $('#stairs-card').append(` ${weeklyData}`)
+}
 
 loadName();
