@@ -55,7 +55,6 @@ const weeklyHrsSlept = (sleep) => {
   })
   $('#weekly-sleep-info').append(` ${listedData.join(' ')}`)
   weeklySleepQual(sleep)
-  // $('#weekly-sleep-qual').append(`${sleep.weekQuality(moment().format('DD/MM/YYYY'))} </br>` )
 }
 
 const weeklySleepQual = (sleep) => {
