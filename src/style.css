@@ -36,7 +36,7 @@ section {
 }
 
 #physical-activity {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 h3 {
@@ -51,10 +51,6 @@ h2 {
 h1 {
   margin: 0;
   width: 100%;
-}
-
-#physical-activity-header {
-  grid-column: span 3;
 }
 
 article {
