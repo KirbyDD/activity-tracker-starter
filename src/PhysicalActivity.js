@@ -4,9 +4,14 @@ class PhysicalActivity {
     this.info = info;
   }
 
+  stepsByDay(day) {
+    let steps = this.info.activityData.filter(el => el.date === day)[0].numSteps;
+    return steps;
+  }
+
   milesWalked(day) {
     let steps = this.info.activityData.filter(el => el.date === day)[0].numSteps;
-    let miles = this.user.strideLength * steps / 5280;
+    let miles = this.user.person.strideLength * steps / 5280;
     return miles.toFixed(2)
   }
 

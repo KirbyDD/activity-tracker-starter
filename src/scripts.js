@@ -5,6 +5,7 @@ const loadName = () => {
   loadInfo(user);
   loadHydrationData(user);
   loadSleepInfo(user);
+  todaysActivity(user)
 }
 
 const loadInfo = (user) => {
@@ -63,6 +64,14 @@ const weeklySleepQual = (sleep) => {
     return `<tr><td>${el.date}</td><td>${el.sleepQuality}</td>`
   })
   $('#weekly-sleep-qual').append(` ${listedData.join(' ')}`)
+}
+
+const todaysActivity = (user) => {
+  let info = activityData.filter(el => {return el.userID === user.person.id})[0]
+  let activity = new PhysicalActivity(user, info)
+  $('#todays-steps').append(` ${activity.stepsByDay(moment().format('DD/MM/YYYY'))}`)
+  $('#mins-active').append(` ${activity.activeMins(moment().format('DD/MM/YYYY'))}`)
+  $('#miles-walked').append(` ${activity.milesWalked(moment().format('DD/MM/YYYY'))}`)
 }
 
 
