@@ -48,28 +48,12 @@ class PhysicalActivity {
     let information = this.info.activityData.map(el => el.flightsOfStairs)
     return Math.max(...information)
   }
-
-  weeklySteps(date) {
-    let reversed = this.info.activityData.map(el => el).reverse()
-    let dataByDay = reversed.filter(el => el.date === date)[0];
-    let index = reversed.indexOf(dataByDay)
-    let data = reversed.slice(index, index + 7).map(el => el.numSteps);
-    return data;
-  }
   
-  weeklyStairs(date) {
+  weeklyInfo(date) {
     let reversed = this.info.activityData.map(el => el).reverse()
     let dataByDay = reversed.filter(el => el.date === date)[0];
     let index = reversed.indexOf(dataByDay)
-    let data = reversed.slice(index, index + 7).map(el => el.flightsOfStairs);
-    return data;
-  }
-  
-  weeklyMinutes(date) {
-    let reversed = this.info.activityData.map(el => el).reverse()
-    let dataByDay = reversed.filter(el => el.date === date)[0];
-    let index = reversed.indexOf(dataByDay)
-    let data = reversed.slice(index, index + 7).map(el => el.minutesActive);
+    let data = reversed.slice(index, index + 7);
     return data;
   }
 }
