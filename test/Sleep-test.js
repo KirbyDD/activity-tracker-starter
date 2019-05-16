@@ -51,10 +51,10 @@ describe("Sleep", function() {
   });
 
   it('should return week of hours slept based on day', function() {
-    expect(sleep.weekSleep('12/05/2019')[1]).to.equal('Date: 07/05/2019, Hours Slept: 10.7')
+    expect(sleep.weekSleep('12/05/2019')[1]).to.be.an('object')
   });
 
   it('should return week of sleep quality based on day', function() {
-    expect(sleep.weekQuality('12/05/2019')[0]).to.equal('Date: 06/05/2019, Sleep Quality: 4.8')
+    expect(sleep.weekQuality('12/05/2019')[0]).to.be.an('object')
   });
 });
