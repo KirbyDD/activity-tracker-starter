@@ -1,7 +1,7 @@
 const loadName = () => {
   let randomNum = Math.floor(Math.random() * userData.length + 1)
   let user = new User(userData[randomNum]);
-  $('.user-name-span').text(`User ${user.returnFirstName()}`)
+  $('.user-name-span').text(`${user.returnFirstName()}`)
   loadInfo(user);
   loadHydrationData(user);
   loadSleepInfo(user);
