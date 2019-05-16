@@ -31,15 +31,15 @@ class PhysicalActivity {
 
   stepGoalReached(day) {
     let steps = this.info.activityData.filter(el => el.date === day)[0].numSteps;
-    if (steps < this.user.dailyStepGoal) {
-      return `You did not reach you step goal.`
+    if (steps < this.user.person.dailyStepGoal) {
+      return `You did not reach your step goal.`
     } else {
       return `You reached your step goal!`
     }
   }
 
   daysStepGoalReached() {
-    let information = this.info.activityData.filter(el => el.numSteps > this.user.dailyStepGoal)
+    let information = this.info.activityData.filter(el => el.numSteps > this.user.person.dailyStepGoal)
     let dates = information.map(el => el.date);
     return `These are the dates you reached your step goal: ${dates}`
   }
