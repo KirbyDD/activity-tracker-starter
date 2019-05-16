@@ -8,11 +8,11 @@
 </head>
 <body>
   <nav >
-    <h1>Activity Tracker</h1>
+    <h1 id="main-title">ActivityTracker</h1>
   </nav>
   <header>
-    <h2><span class="user-name-span">User</span>'s Info</h2>
     <section id="user-data">
+      <h2><span class="user-name-span">User</span>'s Info</h2>
       <article class="user-data-card" id="user-identity">
         <h3>General User Info</h3>
         <p id="user-email" aria-label="user-email">Email:</p>
@@ -26,26 +26,31 @@
     </section>  
   </header>
   <main>
-    <h2 id="physical-activity-header">Physical Activity</h2>
     <section id="physical-activity">
+      <h2 id="physical-activity-header">Physical Activity</h2>
       <article class="physical-activity-card" id="todays-physical-card">
         <h3>Todays Physical Data</h3> 
         <p class="todays-steps" id="todays-steps">Today's Steps: </p>
         <p class="mins-active" id="mins-active">Today's Minutes of Activity: </p>
         <p class="miles-walked" id="miles-walked">Miles Walked Today: </p>
       </article>
-      <article class="physical-activity-card" id="minutes-card">
-
-      </article>
-      <article class="physical-activity-card" id="stairs-card">
-
-      </article>
-      <article class="physical-activity-card" id="steps-card">
-
+      <article class="physical-activity-card" id="weekly-activity-card">
+        <h3>Weekly Activity Data:</h3>
+        <table id="weekly-activity-table" aria-label="weekly-activity-data-table">
+          <thead>
+            <th>Date</th>
+            <th>Stairs Climbed</th>
+            <th>Number Of Steps</th>
+            <th>Minutes Active</th>
+          </thead>
+          <tbody id="weekly-physical-data">
+        
+          </tbody>
+        </table>
       </article>
     </section>
-    <h2>Sleep</h3>
     <section id="sleep">
+      <h2 id="sleep-title">Sleep</h2>
       <article class="sleep-card" id="hours-slept-card">
         <h3>Todays Sleep Data</h3>
         <p class="todays-hours-slept" id="todays-hours-slept">Hours Slept Today:</p>
@@ -76,8 +81,8 @@
         </table>
       </article>
     </section>
-    <h2>Hydration</h3>
     <section id="hydration">
+      <h2>Hydration</h3>
       <article class="hydration-card" id="ounces-card">
         <h3 id="ounces-drank-today" aria-label="ounces-drank-today">Ounces drank today:</h3>
         <p id="ounces-drank"></p>

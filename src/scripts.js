@@ -42,7 +42,9 @@ const weeklyHydrationData = (user, userHydration) => {
 }
 
 const loadSleepInfo = (user) => {
-  let info = sleepData.filter((el) => {return el.userID === user.person.id})[0]
+  let info = sleepData.filter((el) => {
+    return el.userID === user.person.id
+  })[0]
   let sleep = new Sleep(user, info)
   $('#todays-hours-slept').append(` ${sleep.hoursSlept(moment().format('DD/MM/YYYY'))}`)
   $('#avg-hours-slept').append(` ${sleep.avgHoursSlept()}`)
@@ -67,7 +69,9 @@ const weeklySleepQual = (sleep) => {
 }
 
 const todaysActivity = (user) => {
-  let info = activityData.filter(el => {return el.userID === user.person.id})[0]
+  let info = activityData.filter(el => {
+    return el.userID === user.person.id
+  })[0]
   let activity = new PhysicalActivity(user, info)
   $('#todays-steps').append(` ${activity.stepsByDay(moment().format('DD/MM/YYYY'))}`)
   $('#mins-active').append(` ${activity.activeMins(moment().format('DD/MM/YYYY'))}`)
@@ -79,7 +83,9 @@ const weeklyActivity = (activity) => {
   let weeklyData = activity.weeklyInfo(moment().format('DD/MM/YYYY')).map(el => {
     return `<tr><td>${el.date}</td><td>${el.flightsOfStairs}</td><td>${el.numSteps}</td><td>${el.minutesActive}</td></tr>`
   })
-  $('#stairs-card').append(` ${weeklyData}`)
+  $('#weekly-physical-data').append(` ${weeklyData}`)
 }
+
+$()
 
 loadName();

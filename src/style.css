@@ -5,14 +5,14 @@
 
 body {
   margin: 0;
-  background-color: lightslategrey;
+  background-color: #1e2729d1;
   padding: 0;
 }
 
 nav {
   width: 100%;
-  background-color: rgb(72, 72, 155);
-  border-bottom: 2px solid  rgb(94, 95, 102);
+  background-color: #bbbbbb;
+  border-bottom: 2px solid rgb(94, 95, 102);
 }
 
 nav,
@@ -39,7 +39,7 @@ section {
 }
 
 #physical-activity {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 h3 {
@@ -47,18 +47,26 @@ h3 {
 }
 
 h2 {
-  width: 100%;
   grid-column: span 2;
+  width: 100%;
+}
+
+#sleep-title {
+  grid-column: span 3;
 }
 
 h1 {
   margin: 0;
-  width: 100%;
+  text-align: left;
+}
+
+#main-title {
+  font-weight: 300;
 }
 
 article {
   background-color: rgb(247, 247, 247);
-  border: 2px rgb(94, 95, 102) solid;
+  border: 2px #bbbbbb solid;
   border-radius: 5px;
   width: 100%;
   overflow: scroll;
@@ -67,20 +75,23 @@ article {
 
 table {
   border-collapse: collapse;
+  width: 90%;
+  margin: 15px auto;
+  padding: 0;
 }
 
 td,
 tr,
 th,
 table {
-  border: 1px black solid;
-  width: 300px;  
+  border: 1px black solid; 
 }
 
 #user-step-goal {
   line-height: 2em;
 }
 
+#weekly-activity-card,
 #sleep-hours-card,
 #sleep-quality-card,
 .hydration-card {
@@ -93,9 +104,4 @@ table {
 
 #ounces-drank {
   font-size: 3em;
-}
-
-table {
-  margin: 15px auto;
-  padding: 0;
 }
