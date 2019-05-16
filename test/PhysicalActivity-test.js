@@ -25,19 +25,4 @@ describe('PhysicalActivity', function() {
     
     expect(physicalActivity).to.be.an.instanceOf(PhysicalActivity);
   });
-
-  it('should return steps of the user for the letest week', function() {
-    
-    expect(physicalActivity.weeklySteps('12/05/2019')).to.be.an('array');
-  });
-
-  it('should return steps of the user for the letest week', function () {
-
-    expect(physicalActivity.weeklyMinutes('12/05/2019')).to.be.an('array');
-  });
-
-  it('should return flight of stairs climbed by the user for the letest week', function () {
-
-    expect(physicalActivity.weeklyStairs('12/05/2019')).to.be.an('array');
-  });
 });
