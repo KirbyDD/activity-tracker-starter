@@ -1,6 +1,8 @@
 # Activity Tracker Starter
 
-Activity Tracker is a site that keeps track of the hydration, sleep, and physical activity of a user across multiple dates. It deals with multiple data sets and uses OOP to run code dynamically. 
+## Description
+
+Activity Tracker is a site that keeps track of the hydration, sleep, and physical activity of a user across multiple dates. It deals with multiple data sets and uses OOP to run code dynamically. This was paired collaboration between De'Marcus Kirby and Antonio Fry. 
 
 More details of this project are outlined in [this project spec](http://frontend.turing.io/projects/activity-tracker.html).
 
