@@ -1,6 +1,8 @@
 # Activity Tracker Starter
 
-The details of this project are outline in [this project spec](http://frontend.turing.io/projects/activity-tracker.html).
+Activity Tracker is a site that keeps track of the hydration, sleep, and physical activity of a user across multiple dates. It deals with multiple data sets and uses OOP to run code dynamically. 
+
+More details of this project are outlined in [this project spec](http://frontend.turing.io/projects/activity-tracker.html).
 
 ## Setup
 
