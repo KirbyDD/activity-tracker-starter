@@ -86,6 +86,4 @@ const weeklyActivity = (activity) => {
   $('#weekly-physical-data').append(` ${weeklyData}`)
 }
 
-$()
-
 loadName();
