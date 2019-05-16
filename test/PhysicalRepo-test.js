@@ -28,16 +28,16 @@ describe('PhysicalRepo', function() {
 
   it('should return the average of all users steps', function() {
 
-    expect(physicalRepo.getAverageSteps('06/05/2019')).to.equal(11208);
+    expect(physicalRepo.getAverageSteps('06/05/2019')).to.equal(11919);
   });
 
   it('should return the average of all users stairs climbed', function () {
 
-    expect(physicalRepo.averageStairsClimbed('06/05/2019')).to.equal(54);
+    expect(physicalRepo.averageStairsClimbed('06/05/2019')).to.equal(47);
   });
 
   it('should return the average of all users time active', function () {
 
-    expect(physicalRepo.averageTimeActive('06/05/2019')).to.equal(312);
+    expect(physicalRepo.averageTimeActive('06/05/2019')).to.equal(305);
   });
 });
